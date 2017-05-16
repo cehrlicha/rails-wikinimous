@@ -2,13 +2,14 @@
   <div class="row">
 
       <h2><%= @article.title %></h2>
-      <p><%= @article.context %></p>
+      <p><%= raw Kramdown::Document.new(@article.context).to_html %></p>
 
-      <%= link_to "Back to list", articles_path %>
-      <%= link_to "Edit", edit_article_path %>
+      <%= link_to "Back to list", articles_path, class: 'link' %>
+      <%= link_to "Edit", edit_article_path, class: 'link' %>
       <%= link_to "Delete", article_path(@article),
             method: :delete,
-            data: { confirm: "Are you sure?" }%>
+            data: { confirm: "Are you sure?" },
+            class: 'link'%>
 
   </div>
 </div>

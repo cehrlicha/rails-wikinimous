@@ -55,3 +55,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #faker gem
 gem 'faker'
+
+# edit text in browser
+gem 'kramdown'
+
+# add code
+gem 'ace-rails-ap'
